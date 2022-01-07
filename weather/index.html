@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>WebOas.is - Weather</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name=viewport content="width=device-width, initial-scale=0.7" />
+	<link rel="dns-prefetch" href="https://api.darksky.net">
+	<link rel="dns-prefetch" href="https://nominatim.openstreetmap.org">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../favicon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../favicon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="../favicon/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../favicon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="../favicon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../favicon/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="../favicon/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="../favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="../favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../favicon/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="../favicon/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="../favicon/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="../favicon/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="../favicon/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="../favicon/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="../favicon/mstile-310x310.png" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/weather.min.css" rel="stylesheet" />
+    <link href="css/animation.min.css" rel="stylesheet" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/classie.min.js"></script>
+    <script src="js/velocity.min.js"></script>
+    <script src="js/skycons.min.js"></script>
+        <!--[if IE]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <![endif]-->
+</head>
+<body class="background">
+        <div class="container">
+            <div class="input-group input-group-lg">
+                <input type="text" class="form-control cityVal" autofocus placeholder="Enter Zip Code or City">
+                <span id="searchclear" class="glyphicon glyphicon-remove-circle"></span>
+                <div class="input-group-btn">
+                    <a class="btn btn-primary getCity">Search</a>
+                    <a class="btn btn-primary getCurrentCity">Locate</a>
+                    <a href="../" class="btn btn-primary">Home</a>
+                </div>
+            </div>
+            <div class="row currentWeather text-center"></div>
+            <div class="row daysList text-center"></div>
+        </div>
+    <script src="js/geoloWeather.min.js"></script>
+</body>
+</html>

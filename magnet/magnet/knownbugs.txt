@@ -1,0 +1,8 @@
+wasm streaming compile failed: TypeError: Response has unsupported MIME type 2.cb8da0a6.chunk.js:2:563522
+falling back to ArrayBuffer instantiation 2.cb8da0a6.chunk.js:2:563560
+
+https://gist.github.com/WesThorburn/62ea13952749d6563ce2fb15b45f1ba8
+
+https://web.archive.org/web/20210320004736/https://gist.github.com/WesThorburn/62ea13952749d6563ce2fb15b45f1ba8
+
+Possible fix for MIME type browser console error.

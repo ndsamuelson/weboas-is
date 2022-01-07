@@ -1,0 +1,10 @@
+/**
+ * Stock Screener
+ * --------------------
+ * Version 1.7.0, built on Tuesday, November 21, 2017
+ * Copyright (c) Financial Apps and Plugins <info@financialplugins.com>. All rights reserved.
+ * Demo: http://financialplugins.com/products/stock-screener/
+ * Purchase: https://codecanyon.net/item/stock-screener/18297488?ref=financialtechnology
+ * Like: https://www.facebook.com/financialplugins/
+ */
+function modal_show(o,a,d,t,n,l){return"undefined"==typeof n&&(n=!0),function(n,e){return modal='<div id="modal-box-'+n+'" class="remodal '+(l?"modal-fullscreen":"")+'" data-remodal-id="modal">\t<button data-remodal-action="close" class="remodal-close"></button>\t<h1>'+o+"</h1>\t<p>"+a+"\t</p>\t<br>"+("undefined"!=typeof d?'<button type="button" data-remodal-action="confirm" class="remodal-confirm">'+d+"</button>":"")+'<button type="button" data-remodal-action="cancel" class="remodal-cancel">'+("undefined"==typeof d?"OK":"Cancel")+"</button></div>",modal=$(modal),$("body").append(modal),modal_inst=modal.remodal({closeOnConfirm:!1}),modal_inst.open(),modal.on("closed",function(){$(this).remove()}),$("#modal-box-"+n+" #modal_ok").on("click",function(){t(modal,modal_inst),e&&modal_inst.close()}),modal}(modal_cntr++,n)}var modal_cntr=0;

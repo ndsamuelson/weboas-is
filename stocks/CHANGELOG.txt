@@ -1,0 +1,30 @@
+v1.7.0 - 20 Nov 2017
+- Bug fix: app stopped working.
+
+v1.6.1 - 27 Sep 2017
+- Bug fix: not all stocks were displayed for some markets
+
+v1.6.0 - 04 Jul 2017
+- Static image charts replaced with HTML5 charts (based on Chart.js)
+
+v1.5.0 - 29 Mar 2017
+- Amsterdam, Singapore and Malaysia exchanges added
+- Price/Sales added to Fundamentals tab
+
+v1.4.0 - 12 Dec 2016
+- Stockholm, Helsinki and Oslo OMX exchanges added
+
+v1.3.0 - 07 Dec 2016
+- Filter by symbol / stock name is added
+- Popup with extended information about stock / company is added
+
+v1.2.0 - 26 Oct 2016
+- Bug fixes
+- HKEx added
+
+v1.1.0 - 15 Oct 2016
+- Issue with LSE market loading is fixed
+- Some CSV file load optimizations
+
+v1.0.0 - 08 Oct 2016
+- Initial release

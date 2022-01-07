@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="description" content="Convert torrent files to magnet URIs using Javascript" />
+	<meta name="keywords" content="torrent,magnet,javascript,convert,online,sha1,bencode,base32" />
+	<title>WebOas.is - Torrent to Magnet Converter</title>
+	<link rel="shortcut icon" href="favicon.png" />
+	<link rel="stylesheet" href="style.css" />
+	<script src="src/t2m.loader.js"></script>
+</head>
+<body>
+<div class="header_bar">
+	<div class="main main_no_overflow header">
+		<table class="header_table"><tbody>
+			<tr>
+				<td class="header_table_cell header_table_cell_full">
+					<div class="header_table_description">
+						<div class="header_table_description_name"><h3>Torrent to Magnet</h3></div>
+					</div>
+				</td>
+			</tr>
+		</tbody></table>
+	</div>
+</div>
+<div class="main body">
+	<p><div class="script_disabled script_visible">Javascript is required to use the inline converter.</div>
+		<div class="script_enabled">
+			<div class="converter">
+				<div class="converter_container">
+					<div class="converter_table">
+
+						<div class="converter_cell converter_cell_left">
+							<div class="converter_svg_container">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1" class="converter_svg_graphic">
+									<polygon points="0.7,0 0.7,0.5 1,0.5 0.5,1 0,0.5 0.3,0.5 0.3,0" class="converter_svg_graphic_poly"></polygon>
+								</svg>
+							</div>
+						</div>
+						<div class="converter_cell converter_cell_right">
+							<div class="converter_info">
+								<div class="converter_info_line1">Drop <a class="link_external light_underline link_stop_propagation" href="https://en.wikipedia.org/wiki/Torrent_file" target="_blank"><span>.torrent</span></a> files here</div>
+								<div class="converter_info_line2">to convert them to <a class="link_external light_underline link_stop_propagation" href="https://en.wikipedia.org/wiki/Magnet_uri" target="_blank"><span>magnet URI</span></a>s</div>
+								<div class="converter_info_line3">Or click to open the file browser</div>
+								<input type="file" class="converter_files_input" multiple />
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div></p>
+	<div class="converted"></div>
+</div>
+</body>
+</html>

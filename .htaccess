@@ -1,0 +1,13 @@
+Options +FollowSymLinks
+Options -Indexes
+ErrorDocument 403 /403.html
+ErrorDocument 404 /404.html
+<Files .htaccess>
+    order allow,deny
+    deny from all
+</Files>
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\. [NC,OR]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L,NE]

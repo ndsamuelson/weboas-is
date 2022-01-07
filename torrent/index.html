@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="BTorrent" lang="en">
+  <head>
+    <base href="https://weboas.is/torrent/" />
+    <meta charset="UTF-8" />
+    <title>WebOasis - WebTorrent Client</title>
+    <meta name="description" content="Browser Torrent Client" />
+    <meta name="keywords" content="client, webtorrent, browser, torrent, stream, bittorrent, torrenting, sharing, filesharing, stream, streaming, stream torrents" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="libraries.min.js"></script>
+    <link rel="stylesheet" href="css/libraries.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/ui-grid.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body ng-controller="BTorrentCtrl" ng-cloak="">
+    <header>
+      <h1>WebTorrent Client</h1>
+      <div class="views" ng-show="$root.client.torrents.length == 0">
+        <a ng-href="/torrent/#">Full</a> | <a ng-href="/torrent/download">Single Download</a> |
+        <a ng-href="/torrent/view">Stream / View</a>
+      </div>
+      <div class="aligncenter" style="width: 468px; display: inline-block;"></div>
+    </header>
+    <div id="viewer" ng-style="$root.viewerStyle"></div>
+    <div id="view" ng-view></div>
+    <footer>
+      <a class="button" href="https://weboas.is/torrent/make" target="_blank">Create A Torrent File</a><br />
+	  <a class="button" href="https://weboas.is/torrent/t2m" target="_blank">Convert Torrent to Magnet</a><br />
+	  <a class="button" href="https://yutzuko-torrent.appspot.com" target="_blank">Batch Torrent Editor</a><br />
+	  <a class="button" href="https://webtor.io" target="_blank">WebTor.io</a><br />
+      <a class="button" href="https://weboas.is">Back to WebOasis</a>
+    </footer>
+    <div class="spinner" ng-show="client.processing"><i class="fa fa-spinner fa-spin spinner-icon"></i></div>
+    <script src="app.js"></script>
+  </body>
+</html>

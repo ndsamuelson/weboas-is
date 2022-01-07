@@ -1,0 +1,11 @@
+<div class="container">
+  <div ng-hide="$root.client.torrents.length != 0" style="vertical-align: middle; text-align: center">
+    <div class="row">
+      <form class="no-margin" ng-submit="addMagnet()">
+        <label>Stream/View: Torrent Must Contain Files That Can Play Within Browser Like MP3 or MP4<br />Example Hash: 08ada5a7a6183aae1e09d831df6748d566095a10</label>
+        <input type="text" placeholder="magnet, hash or http(s) .torrent" ng-model="torrentInput" ng-disabled="$root.disabled" style="width: 50%"/>
+      </form>
+    </div>
+  </div>
+  <div class="div" ng-if="selectedTorrent" style="text-align: center">Downloaded {{$root.selectedTorrent.downloaded | pbytes}}/{{$root.selectedTorrent.length | pbytes}} ({{$root.selectedTorrent.progress | progress}}) at {{$root.selectedTorrent.downloadSpeed | pbytes:1}} from {{$root.selectedTorrent.numPeers}} peers. ETA: {{$root.selectedTorrent.timeRemaining | humanTime}}</div>
+</div>

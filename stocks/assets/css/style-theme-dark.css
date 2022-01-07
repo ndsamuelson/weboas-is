@@ -1,0 +1,148 @@
+body.dark-theme {
+  background: #000;
+}
+
+.dark-theme * {color:#f6f6f6;}
+.dark-theme .main-conteiner {
+    background: #111 ;
+}
+
+.dark-theme table.dataTable thead tr {
+    background: #222;
+}
+
+.dark-theme .dataTables_wrapper .bottom {background:#222;}
+
+.dark-theme table.dataTable thead th .filter-btn i, .dark-theme table.dataTable tbody tr .filter-btn i {color:#eee;}
+
+.dark-theme .dataTables_wrapper .bottom {
+    border-color: #444;
+}
+
+
+.dark-theme .table-select-input,
+.dark-theme .popup-filter-input {
+    background: #111;
+    border: 1px solid #444;
+}
+
+.dark-theme .table-select-input .table-select-input-item {
+	color:#ddd;
+}
+
+.dark-theme .table-select-input .table-select-input-item:hover,
+.dark-theme .table-select-input .table-select-input-item.selected {
+	background:#333;
+}
+
+.dark-theme .ui-select {
+    background: #333;
+}
+
+.dark-theme .ui-select:hover {
+	background:#444;
+
+}
+
+.dark-theme .dataTables_paginate .paginate_button a {
+    background: #333;
+    color:#ddd;
+}
+
+.dark-theme .dataTables_paginate .paginate_button a:hover {
+    background: #444;
+}
+
+.dark-theme .dataTables_paginate .paginate_button.current a {
+	background:#444;
+}
+
+.dark-theme .popup-filter-input .reset-btn {
+    background: #333;
+}
+.dark-theme .popup-filter-input .reset-btn:hover {background:#444;}
+.dark-theme .popup-filter-input .reset-btn i {color:#ddd}
+
+.dark-theme .popup-filter-input .lbl-range {color:#aaa}
+
+.dark-theme .ui-widget-header {
+    background: #444;
+}
+
+.dark-theme .ui-widget-content {
+    background: #111;
+}
+
+
+.dark-theme .ui-state-default,
+.dark-theme  .ui-widget-content .ui-state-default,
+.dark-theme  .ui-widget-header .ui-state-default
+{
+	background:#888;
+	outline:none;	
+}
+
+.dark-theme header .inner {
+    background: #444;
+    border-bottom: 1px solid #777;
+}
+
+.dark-theme .popup-filter-input .lbl-range-from,.dark-theme  .popup-filter-input .lbl-range-to {
+    background: inherit;
+}
+
+.dark-theme .ui-datepicker-calendar tr td a.ui-state-default {
+    background: inherit;
+    color: inherit;
+}
+.dark-theme .ui-datepicker-calendar tr td a.ui-state-default:hover {
+    background: #222;
+}
+.dark-theme  .ui-datepicker-calendar tr td a.ui-state-default.ui-state-active {background:#333;}
+.dark-theme  .ui-datepicker-calendar tr td a.ui-state-default.ui-state-highlight {color:#aaf;}
+
+.dark-theme table thead {
+    border-bottom: 1px solid #444;
+}
+
+.dark-theme table tbody tr {
+    border-color: #444;
+}
+.dark-theme table tbody tr:last-child {
+    border-color:transparent;
+}
+.dark-theme table.dataTable tbody tr:hover {
+    background: #333;
+}
+.dark-theme table.dataTable thead th:hover {
+    background: #444444;
+}
+.dark-theme .header .data-view button.active,
+.dark-theme .header .data-view button:hover {
+  border-bottom: 2px solid #ffffff;
+}
+
+.dark-theme .swal2-modal {background:#222;}
+.dark-theme .swal2-modal .swal2-title {color:#eee;}
+.dark-theme .swal2-modal .swal2-text {color:#eee;}
+.dark-theme .swal2-modal .swal2-content {color:#eee;}
+.dark-theme button.swal2-confirm {background:#333;color:#eee;}
+.dark-theme button.swal2-confirm:hover {background:#444;}
+
+.dark-theme div.modal-share-info {  }
+.dark-theme div.modal-share-info div.modal-share-left {  }
+.dark-theme div.modal-share-info div.modal-share-left div.modal-share-line {  }
+.dark-theme div.modal-share-info div.modal-share-left div.modal-share-line label {color: #0b89c3;}
+.dark-theme div.modal-share-info div.modal-share-left div.modal-share-line span {  }
+.dark-theme div.modal-share-info div.modal-share-right {  }
+.dark-theme div.modal-share-info div.modal-share-right img.share-img { filter:invert(); }
+
+
+.dark-theme input.ui.input.filter-string-simple {
+    background:#222;
+    border-color:#000;
+}
+
+.dark-theme input.ui.input.filter-string-simple:focus {
+	border-color:#333;
+}

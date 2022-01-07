@@ -1,0 +1,12 @@
+Options +FollowSymLinks
+Options All -Indexes
+ErrorDocument 403 https://weboas.is/403.html
+ErrorDocument 404 https://weboas.is/404.html
+<Files .htaccess>
+    order allow,deny
+    deny from all
+</Files>
+RewriteEngine On
+RewriteCond %{HTTPS} =on [OR]
+RewriteCond %{HTTP_HOST} !^streamwat\.ch$
+RewriteRule ^(.*)$ "http://streamwat.ch/$1" [R=301,L]

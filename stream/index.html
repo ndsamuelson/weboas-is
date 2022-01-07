@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WebOas.is - Streams</title>
+	<script type="text/javascript" src="hls.min.js"></script>
+	<script type="text/javascript" src="main.min.js"></script>
+	<link rel="stylesheet" href="simple.min.css">
+	<style type="text/css">
+		img, img.up {font-weight:bold;display:block;margin:0 auto;}body{background-color:#333333;transition:all 1s;}footer{color:#F4D6CC;}#movies{display:block;width:50%;margin:0 auto;}#movie{display:block;width:100%;margin:0 auto;}#buttlol{display:block;width:7em;margin:0 auto;}input{text-align:center}::-webkit-input-placeholder{text-align:center}::-moz-placeholder{text-align:center}:-ms-input-placeholder{text-align:center}:-moz-placeholder{text-align:center}#results{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));justify-content:center;align-items:center;grid-gap:2rem;flex-wrap:wrap;width:80%;margin:2rem auto}.result>*{margin:0 auto}button{font-weight:bold;display:block}.meow1{text-align:center!important;display:block!important;position:relative!important;}.meow2{display:inline!important}
+	</style>
+	</head>
+	<body>
+		<a href="https://weboas.is"><img src="logo.svg" style="padding-top:1em" alt="Logo" width="250px"></a>
+		<div id="movies">
+		<br>
+		<input type="text" placeholder="Search Movies" name="Movie" id="movie" onkeypress="clickPress(event)">
+		<br>
+			<div class="meow1">
+			<button onclick="search()" class="meow2" id="buttlol" title="Search">Search</button>
+			<button onclick="newsearch()" class="meow2" title="Reset">Reset</button>
+			</div>
+		</div>
+		<br>
+		<video id="video" width="0" height="0" controls>
+			<source id="src" src="" type="application/x-mpegURL">
+			Your browser does not support the video tag.
+		</video>
+		<div id="results">
+			<article class="result">
+				<button class="up" onclick="getm3u8(one)" style="visibility: hidden;" id="1title">No results found!</button>
+				<img class="up" onclick="getm3u8(one)" style="padding-top:0.3em;visibility:hidden;" id="1img" src="">
+			</article>
+			<article class="result">
+				<button class="up" onclick="getm3u8(two)" style="visibility: hidden;" id="2title">No results found!</button>
+				<img class="up" onclick="getm3u8(two)" style="padding-top:0.3em;visibility:hidden;" id="2img" src="">
+			</article>
+			<article class="result">
+				<button class="up" onclick="getm3u8(three)" style="visibility: hidden;" id="3title">No results found!</button>
+				<img class="up" onclick="getm3u8(three)" style="padding-top:0.3em;visibility:hidden;" id="3img" src="">
+			</article>
+		</div>
+  </body>
+</html>
