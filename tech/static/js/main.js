@@ -479,7 +479,7 @@
                           return (
                             (e.next = 2),
                             L.load(
-                              t.url,
+                              "https://cors.club/" + t.url,
                               function (e, a) {
                                 if (e) console.log("error" + t);
                                 else {

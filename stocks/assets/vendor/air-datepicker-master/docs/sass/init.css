@@ -27,11 +27,13 @@ html, body {
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 *:after, *:before {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 article,
@@ -81,7 +83,7 @@ p {
 }
 
 h1, h2, h3, h4 {
-  font-family: "Fira Sans", sans-serif;
+  font-family: 'Fira Sans', sans-serif;
   line-height: 1;
 }
 
@@ -105,18 +107,24 @@ h4 {
 }
 
 .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .row > * {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 article h2, article h3 {
   position: relative;
   z-index: 1;
 }
+
 article h2:after, article h3:after {
-  content: "";
+  content: '';
   background: rgba(67, 156, 255, 0.2);
   border-radius: 4px;
   opacity: 0;
@@ -126,11 +134,14 @@ article h2:after, article h3:after {
   bottom: -4px;
   position: absolute;
   z-index: -1;
-  transition: all 0.4s 0.3s linear;
+  -webkit-transition: all .4s .3s linear;
+  transition: all .4s .3s linear;
 }
+
 article h2.-hilited-:after, article h3.-hilited-:after {
   opacity: 1;
-  transition: all 0.4s 0.7s linear;
+  -webkit-transition: all .4s .7s linear;
+  transition: all .4s .7s linear;
 }
 
 .container {
@@ -139,19 +150,23 @@ article h2.-hilited-:after, article h3.-hilited-:after {
   padding: 1px 0;
   position: relative;
 }
+
 .container article {
   margin: 60px 0 30px;
 }
+
 @media all and (max-width: 1525px) {
   .container {
     margin-left: 270px;
   }
 }
+
 @media all and (max-width: 1280px) {
   .container {
     margin-right: 20px;
   }
 }
+
 @media all and (max-width: 650px) {
   .container {
     margin-right: 20px;
@@ -160,9 +175,12 @@ article h2.-hilited-:after, article h3.-hilited-:after {
 }
 
 .list-inline {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: -8px -8px 0;
 }
+
 .list-inline > * {
   margin: 8px 8px 0;
 }
@@ -174,14 +192,20 @@ article h2.-hilited-:after, article h3.-hilited-:after {
 
 .lang-link {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   right: 0;
   top: 15px;
 }
+
 .lang-link img {
   margin-right: 5px;
 }
+
 @media all and (max-width: 650px) {
   .lang-link span {
     display: none;
@@ -192,7 +216,7 @@ article h2.-hilited-:after, article h3.-hilited-:after {
   text-align: center;
 }
 
-input[type=text] {
+input[type='text'] {
   outline: none;
   height: 32px;
   border: 1px solid #b5b5b5;
@@ -200,16 +224,19 @@ input[type=text] {
   margin: 0 0 14px;
   color: #444;
   font-family: Tahoma, sans-serif;
-  transition: all 0.2s;
+  -webkit-transition: all .2s;
+  transition: all .2s;
   width: 250px;
 }
-input[type=text]:focus {
+
+input[type='text']:focus {
   border-color: #ffd75c;
 }
 
 ul {
   margin: 0 0 16px;
 }
+
 ul li {
   list-style: none;
   margin-bottom: 8px;
@@ -240,6 +267,7 @@ ul li {
   position: relative;
   margin: 16px 0;
 }
+
 .example .example-code {
   border: none;
   border-radius: 0 0 4px 4px;
@@ -253,6 +281,7 @@ ul li {
   vertical-align: middle;
   margin: 0 4px;
 }
+
 .example-inline .hljs {
   padding: 0 4px;
 }
@@ -260,15 +289,18 @@ ul li {
 .example-content {
   padding: 32px;
 }
+
 @media all and (max-width: 650px) {
   .example-content {
     padding-left: 4%;
     padding-right: 4%;
   }
 }
+
 .example-content h1:first-child, .example-content h2:first-child, .example-content h3:first-child {
   margin-top: 0;
 }
+
 .example-content > *:last-child {
   margin-bottom: 0 !important;
 }
@@ -276,6 +308,7 @@ ul li {
 a {
   color: #47A6EC;
 }
+
 a:hover {
   color: #ff767e;
 }
@@ -287,6 +320,7 @@ a:hover {
   margin: 16px 0;
   font-size: 13px;
 }
+
 .example-code code {
   padding: 16px 32px;
 }
@@ -294,6 +328,7 @@ a:hover {
 .param-inline {
   font-family: Consolas, monospace;
 }
+
 .param-inline strong {
   background: #efefef;
   color: #333;
@@ -304,12 +339,13 @@ a:hover {
   padding: 3px 6px 4px;
   margin-right: 4px;
 }
+
 .param-inline i {
   color: #838383;
-  font-size: 0.95em;
+  font-size: .95em;
   font-style: normal;
   font-weight: 100;
-  font-family: "Fira Sans", sans-serif;
+  font-family: 'Fira Sans', sans-serif;
   display: inline-block;
   vertical-align: middle;
   margin-right: 4px;
@@ -321,21 +357,24 @@ a:hover {
   text-align: center;
   margin-top: 54px;
 }
+
 .promo-header span {
   display: block;
-  font-size: 0.5em;
+  font-size: .5em;
 }
 
 .datepicker-promo {
   text-align: center;
 }
+
 .datepicker-promo .datepicker-inline {
   display: inline-block;
 }
 
-.range-example input[type=text] {
+.range-example input[type='text'] {
   width: 150px;
 }
+
 .range-example span {
   display: inline-block;
   margin: 0 8px;
@@ -344,9 +383,11 @@ a:hover {
 .param-header {
   margin-bottom: 8px;
 }
+
 .param-header h3 {
   margin-bottom: 2px;
 }
+
 .param-header p {
   margin: 0;
   font-size: 13px;
@@ -370,22 +411,27 @@ a:hover {
   top: 0;
   left: 0;
   bottom: 0;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
+
 @media all and (max-width: 650px) {
   .nav-wrap {
     display: none;
   }
 }
+
 .nav-wrap:after, .nav-wrap:before {
-  content: "";
+  content: '';
   pointer-events: none;
   position: absolute;
   left: 0;
   right: 0;
   height: 28px;
 }
+
 .nav-wrap:after {
+  background: -webkit-gradient(linear, left bottom, left top, from(#fff), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(to top, #fff, rgba(255, 255, 255, 0));
   bottom: 0;
 }
@@ -410,10 +456,12 @@ a:hover {
   font-size: 22px;
   margin: 0 0 8px;
 }
+
 .nav--section-title a {
   color: #000;
   text-decoration: none;
 }
+
 .nav--section-title a:hover {
   color: #ff767e;
 }
@@ -428,10 +476,12 @@ a:hover {
   font-weight: normal;
   font-family: Tahoma, sans-serif;
 }
+
 .nav--subsection-title a {
   color: #787878;
   text-decoration: none;
 }
+
 .nav--subsection-title a:hover {
   color: #ff767e;
 }
@@ -444,30 +494,38 @@ a:hover {
   border-radius: 50%;
   left: 50%;
   bottom: 1px;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
+
 .-selected- .dp-note {
   bottom: 2px;
   background: #fff;
-  opacity: 0.5;
+  opacity: .5;
 }
 
 .visual-tests {
   padding-top: 12px;
   padding-bottom: 120px;
 }
+
 .visual-tests h1 {
   color: #555;
   font-size: 20px;
   margin: 0;
   padding-left: 16px;
 }
+
 .visual-tests .row {
   border-bottom: 1px solid #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 16px;
 }
+
 .visual-tests article:last-child .row {
   border: none;
 }
@@ -476,9 +534,11 @@ a:hover {
   padding: 16px;
   width: 284px;
 }
+
 .vt-tile input {
   width: 100%;
 }
+
 .vt-tile h2 {
   font-family: monospace;
   font-size: 14px;
@@ -498,10 +558,12 @@ a:hover {
   overflow: auto;
   z-index: 10;
 }
+
 .v-log p {
   margin: 0;
   color: greenyellow;
 }
+
 .v-log span {
   color: #ddd;
 }
@@ -521,10 +583,12 @@ a:hover {
   height: 100%;
   overflow: auto;
 }
+
 .logger--content p {
   margin: 0;
   color: greenyellow;
 }
+
 .logger--content span {
   color: #ddd;
 }
@@ -536,18 +600,27 @@ a:hover {
   position: absolute;
   height: 32px;
   padding: 0 8px;
-  font-family: "Tahoma", sans-serif;
+  font-family: 'Tahoma', sans-serif;
   font-size: 13px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: rgba(255, 255, 255, 0.5);
   right: 24px;
   bottom: 0;
 }
+
 .logger--clear:hover {
   background: rgba(255, 255, 255, 0.8);
 }
+
 .logger--clear:active {
   background: rgba(255, 255, 255, 0.3);
-}/*# sourceMappingURL=init.css.map */
+}
+/*# sourceMappingURL=init.css.map */
