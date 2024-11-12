@@ -2,9 +2,9 @@ var one = "";
 var two = "";
 var three = "";
 function search() {
-	var url2 = proxyserver();
+	// var url2 = proxyserver();
     document.getElementById("buttlol").innerHTML = "Searching";
-    fetch(url2 + "/https://lookmovie.io/api/v1/movies/do-search/?q=" + document.getElementById('movie').value)
+    fetch("https://lookmovie.io/api/v1/movies/do-search/?q=" + document.getElementById('movie').value)
         .then((response) => {
             if (response.ok) {
                 return response.json();
@@ -131,10 +131,10 @@ function ooh() {
 function getm3u8(slug) {
     ooh();
     var url = proxyserver();
-	var text = Get(url + "/https://lookmovie.io/movies/view/" + slug);
-    var text2 = Get(url + "/https://lookmovie.io/movies/view/" + slug).split("\n");
+	var text = Get("https://lookmovie.io/movies/view/" + slug);
+    var text2 = Get("https://lookmovie.io/movies/view/" + slug).split("\n");
     var response = text.split("id_movie: ")[1].split(",")[0];
-    fetch(url + "/https://lookmovie.io/api/v1/security/movie-access?id_movie=" + response + "&token=1&sk=&step=1")
+    fetch("https://lookmovie.io/api/v1/security/movie-access?id_movie=" + response + "&token=1&sk=&step=1")
         .then((response) => {
             if (response.ok) {
                 return response.json();
@@ -147,10 +147,10 @@ function getm3u8(slug) {
                 var exp = data["data"]["expires"];
                 var act = data["data"]["accessToken"];
                 var video = document.getElementById('video');
-                var js = JSON.parse(Get(url + "/https://lookmovie.io/manifests/movies/json/" + response + "/" + exp + "/" + act + "/master.m3u8"));
+                var js = JSON.parse(Get("https://lookmovie.io/manifests/movies/json/" + response + "/" + exp + "/" + act + "/master.m3u8"));
                 if (Hls.isSupported()) {
                     var hls = new Hls();
-                    hls.loadSource(url + "/" + js["720p"].replace("/720p/", "/1080p/"));
+                    hls.loadSource("/" + js["720p"].replace("/720p/", "/1080p/"));
                     hls.attachMedia(video);
 					clear();
 					makeHidden();
@@ -186,11 +186,11 @@ function getm3u8(slug) {
         })
         .catch((error) => console.error("FETCH ERROR:", error));
 }
-function proxyserver() {
-	var proxylist = ["https://www.cors.llw.name", "https://cors-anywhere-k8s.innocode.no", "https://proxy.nil.cx", "https://corss.twiketo.com", "https://cors.filavents.com", "https://control.fairway321.com", "https://proxy.sevaexchange.com", "https://cors-proxy.husl.pro", "https://cors.darpan.online", "https://cors-anywhere.usylibra.eu", "https://cors.was.exposed", "https://cors-proxy.crawler.link", "https://k.oe-jpy.com", "https://cors.ebapay.ir", "https://cors.spiralyze.com", "https://proxy.urjc.info", "https://cors.dprimero.com", "https://cors.netlob.dev", "https://cors.r2h.us", "https://cors.zimjs.org", "https://cors.v001.dev", "https://mmcors.autonio.foundation", "https://cors.bystrov.agency", "https://ip.here.fm", "https://cors-proxy.openhouse.study", "https://cors.diystock.ai", "https://cors-proxy.svi.solutions"];
-	var randomproxy = proxylist[~~(Math.random() * proxylist.length)];
-	return randomproxy;
-}
+// function proxyserver() {
+// 	var proxylist = ["https://www.cors.llw.name", "https://cors-anywhere-k8s.innocode.no", "https://proxy.nil.cx", "https://corss.twiketo.com", "https://cors.filavents.com", "https://control.fairway321.com", "https://proxy.sevaexchange.com", "https://cors-proxy.husl.pro", "https://cors.darpan.online", "https://cors-anywhere.usylibra.eu", "https://cors.was.exposed", "https://cors-proxy.crawler.link", "https://k.oe-jpy.com", "https://cors.ebapay.ir", "https://cors.spiralyze.com", "https://proxy.urjc.info", "https://cors.dprimero.com", "https://cors.netlob.dev", "https://cors.r2h.us", "https://cors.zimjs.org", "https://cors.v001.dev", "https://mmcors.autonio.foundation", "https://cors.bystrov.agency", "https://ip.here.fm", "https://cors-proxy.openhouse.study", "https://cors.diystock.ai", "https://cors-proxy.svi.solutions"];
+// 	var randomproxy = proxylist[~~(Math.random() * proxylist.length)];
+// 	return randomproxy;
+// }
 function newsearch() {
 	window.location.reload(true);
 }
